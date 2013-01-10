@@ -1,0 +1,7 @@
+parameters:
+#    rene_blog.example.class: Rene\BlogBundle\Example
+
+services:
+#    rene_blog.example:
+#        class: %rene_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

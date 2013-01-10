@@ -1,0 +1,28 @@
+ReneBlogBundle_homepage:
+    pattern:  /
+    defaults: { _controller: ReneBlogBundle:Page:index }
+    requirements:
+        _method:  GET
+        
+ReneBlogBundle_about:
+    pattern:  /about
+    defaults: { _controller: ReneBlogBundle:Page:about }
+    requirements:
+        _method:  GET
+      
+ReneBlogBundle_contact:
+    pattern:  /contact
+    defaults: { _controller: ReneBlogBundle:Page:contact }
+    requirements:
+        _method:  GET|POST
+
+ReneBlogBundle_blog_show:
+    pattern:  /{id}
+    defaults: { _controller: ReneBlogBundle:Blog:show }
+    requirements:
+        _method:  GET
+        id: \d+      
+      
+        
+        
+        
