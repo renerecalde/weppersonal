@@ -23,6 +23,12 @@ ReneBlogBundle_blog_show:
         _method:  GET
         id: \d+      
       
+ReneBlogBundle_comment_create:
+    pattern:  /comment/{blog_id}
+    defaults: { _controller: ReneBlogBundle:Comment:create }
+    requirements:
+        _method:  POST
+        blog_id: \d+
         
         
         

@@ -17,8 +17,18 @@ class PageController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ReneBlogBundle:Page:index.html.twig');
+        $em = $this->getDoctrine()
+                   ->getEntityManager();
+
+        
+        $blogs = $em->getRepository('ReneBlogBundle:Blog')
+                    ->getLatestBlogs();
+
+        return $this->render('ReneBlogBundle:Page:index.html.twig', array(
+            'blogs' => $blogs
+        ));
     }
+    
     public function aboutAction()
     {
         return $this->render('ReneBlogBundle:Page:about.html.twig');
