@@ -66,5 +66,27 @@ class PageController extends Controller
             'form' => $form->createView()
         ));
     }
+    public function sidebarAction()
+    {
+        $em = $this->getDoctrine()
+                   ->getEntityManager();
+
+        $tags = $em->getRepository('ReneBlogBundle:Blog')
+                   ->getTags();
+
+        $tagWeights = $em->getRepository('ReneBlogBundle:Blog')
+                         ->getTagWeights($tags);
+        
+        $commentLimit   = $this->container
+                           ->getParameter('blogger_blog.comments.latest_comment_limit');
+        
+        $latestComments = $em->getRepository('ReneBlogBundle:Comment')
+                             ->getLatestComments($commentLimit);
+
+        return $this->render('ReneBlogBundle:Page:sidebar.html.twig', array(
+            'latestComments'    => $latestComments,
+            'tags' => $tagWeights
+        ));
+    }
 }
 ?>

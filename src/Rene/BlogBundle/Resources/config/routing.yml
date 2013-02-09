@@ -17,7 +17,7 @@ ReneBlogBundle_contact:
         _method:  GET|POST
 
 ReneBlogBundle_blog_show:
-    pattern:  /{id}
+    pattern:  /{id}/{slug}
     defaults: { _controller: ReneBlogBundle:Blog:show }
     requirements:
         _method:  GET
