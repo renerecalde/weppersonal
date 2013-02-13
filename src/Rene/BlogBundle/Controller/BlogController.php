@@ -8,6 +8,8 @@
 
 namespace Rene\BlogBundle\Controller;
 
+
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**

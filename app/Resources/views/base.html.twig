@@ -10,6 +10,7 @@
         {% block stylesheets %}
             <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
             <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>	
             <link href="{{ asset('css/screen.css') }}" type="text/css" rel="stylesheet" />
         {% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
@@ -22,17 +23,29 @@
                     {% block navigation %}
                         <nav>
                             <ul class="navigation">
+								<li><span href="#">Rene Recalde<span> </li>	
                                 <li><a href="{{ path('ReneBlogBundle_homepage') }}">Home</a></li>
-                                <li><a href="{{ path('ReneBlogBundle_about') }}">About</a></li>
-                                <li><a href="{{ path('ReneBlogBundle_contact') }}">Contact</a></li>
+                                <li><a href="{{ path('ReneBlogBundle_about') }}">Tec</a></li>
+                                <li><a href="{{ path('ReneBlogBundle_contact') }}">Contacto</a></li>
                             </ul>
                         </nav>
                     {% endblock %}
                 </div>
 
                 <hgroup>
-                    <h2>{% block blog_title %}<a href="{{ path('ReneBlogBundle_homepage') }}">symblog</a>{% endblock %}</h2>
-                    <h3>{% block blog_tagline %}<a href="{{ path('ReneBlogBundle_homepage') }}">creando un blog en Symfony2</a>{% endblock %}</h3>
+                	<div class="contenedor">
+	                	<div class="lateral">
+                			<img src="{{asset('img/logo.png') }}" alt="Blog" />
+                    	</div>
+                    	<div class="principal">
+                    		<h1>Bienvenido al Blog</h1>
+                    		<p>
+                    			uju is DevOps Distilled. Through the use of charms, juju allows you to easily deploy services according to best practices. You can use charms unmodified, or easily change and connect them to fit your needs. This site allows you to browse the available charms.
+                    		</p>
+                    	</div>
+                    </div>
+                    	
+                
                 </hgroup>
             </header>
 
