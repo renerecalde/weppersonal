@@ -1,11 +1,11 @@
 {# empty Twig template #}
 {% extends 'ReneBlogBundle::base.html.twig' %}
 
-{% block title %}Contact{% endblock%}
+{% block title %}Contacto{% endblock%}
 
 {% block body %}
     <header>
-        <h1>Contact symblog</h1>
+        <h1>Contactese con el blog</h1>
     </header>
 
 {% if app.session.hasFlash('blogger-notice') %}
@@ -15,18 +15,19 @@
 {% endif %}
 
 
-    <p>Want to contact symblog?</p>
+    <p>Envienos un mensaje a traves de este formulario.</p>
 
     <form action="{{ path('ReneBlogBundle_contact') }}" method="post" {{ form_enctype(form) }} class="blogger">
         {{ form_errors(form) }}
 
-        {{ form_row(form.name) }}
+       	{{ form_row(form.name,{ 'label': 'Nombre' }) }}
+        
         {{ form_row(form.email) }}
-        {{ form_row(form.subject) }}
-        {{ form_row(form.body) }}
+        {{ form_row(form.subject,{ 'label': 'Asunto' }) }}
+        {{ form_row(form.body,{ 'label': 'Mensaje' }) }}
 
         {{ form_rest(form) }}
 
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Enviar" />
     </form>
 {% endblock %}

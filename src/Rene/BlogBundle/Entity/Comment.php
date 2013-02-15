@@ -221,10 +221,10 @@ class Comment
     public static function loadValidatorMetadata(ClassMetadata $metadata)
     {
         $metadata->addPropertyConstraint('user', new NotBlank(array(
-            'message' => 'You must enter your name'
+            'message' => 'Debe poner su nombre'
         )));
         $metadata->addPropertyConstraint('comment', new NotBlank(array(
-            'message' => 'You must enter a comment'
+            'message' => 'Debe poner su comentario'
         )));
     }
     
