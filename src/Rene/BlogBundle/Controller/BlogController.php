@@ -27,7 +27,7 @@ class BlogController extends Controller
         $blog = $em->getRepository('ReneBlogBundle:Blog')->find($id);
 
         if (!$blog) {
-            throw $this->createNotFoundException('Unable to find Blog post.');
+            throw $this->createNotFoundException('No es posible encontrar este blog.');
         }
 
         $comments = $em->getRepository('ReneBlogBundle:Comment')
