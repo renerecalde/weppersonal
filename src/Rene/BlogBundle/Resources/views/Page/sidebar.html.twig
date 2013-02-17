@@ -1,24 +1,24 @@
-{# empty Twig template #}
+{# Vista de la barra lateral, sidebar. Contiene la nube de tags y los ultimos comentarios. #}
 {# src/Blogger/BlogBundle/Resources/views/Page/sidebar.html.twig #}
 
 <section class="section">
     <header>
-        <h3>Tag Cloud</h3>
+        <h3>Nube de Tags</h3>
     </header>
     <p class="tags">
         {% for tag, weight in tags %}
             <span class="weight-{{ weight }}">{{ tag }}</span>
         {% else %}
-            <p>There are no tags</p>
+            <p>No hay Tags...</p>
         {% endfor %}
     </p>
     <header>
-        <h3>Latest Comments</h3>
+        <h3>Ultimos Comentarios</h3>
     </header>
     {% for comment in latestComments %}
         <article class="comment">
             <header>
-                <p class="small"><span class="highlight">{{ comment.user }}</span> commented on
+                <p class="small"><span class="highlight">{{ comment.user }}</span> comentó en
                     <a href="{{ path('ReneBlogBundle_blog_show', { 'id': comment.blog.id, 'slug': comment.blog.slug }) }}#comment-{{ comment.id }}">
                         {{ comment.blog.title }}
 </a>                </a>
@@ -29,6 +29,6 @@
             </p>
         </article>
     {% else %}
-        <p>There are no recent comments</p>
+        <p>No hay comentarios recientes...</p>
     {% endfor %}
 </section>
