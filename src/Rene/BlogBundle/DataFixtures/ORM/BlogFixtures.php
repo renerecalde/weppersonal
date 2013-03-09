@@ -18,16 +18,16 @@ class BlogFixtures extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager)
     {
         $blog1 = new Blog();
-        $blog1->setTitle('A day with Symfony2');
-        $blog1->setBlog('Lorem ipsum dolor sit amet, consectetur adipiscing eletra electrify denim vel ports.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut velocity magna. Etiam vehicula nunc non leo hendrerit commodo. Vestibulum vulputate mauris eget erat congue dapibus imperdiet justo scelerisque. Nulla consectetur tempus nisl vitae viverra. Cras el mauris eget erat congue dapibus imperdiet justo scelerisque. Nulla consectetur tempus nisl vitae viverra. Cras elementum molestie vestibulum. Morbi id quam nisl. Praesent hendrerit, orci sed elementum lobortis, justo mauris lacinia libero, non facilisis purus ipsum non mi. Aliquam sollicitudin, augue id vestibulum iaculis, sem lectus convallis nunc, vel scelerisque lorem tortor ac nunc. Donec pharetra eleifend enim vel porta.');
-        $blog1->setImage('beach.jpg');
-        $blog1->setAuthor('dsyph3r');
-        $blog1->setTags('symfony2, php, paradise, symblog');
+        $blog1->setTitle('LibreOffice');
+        $blog1->setBlog('LibreOffice es el producto de años de esfuerzo de toda una comunidad de desarrolladores involucrada principalmente con el proyecto OpenOffice.org patrocinado por Sun Microsystems y luego por Oracle. Finalmente un grupo de personas que anteriormente colaboraban con OpenOffice.org deciden independizarse y crear LibreOffice a fin de garantizar la existencia de un proyecto ofimático totalmente Libre como lo es LibreOffice.');
+        $blog1->setImage('libreoffice.jpg');
+        $blog1->setAuthor('Rene Recalde');
+        $blog1->setTags('linux, ubuntu, opensource, editor de texto');
         $blog1->setCreated(new \DateTime());
         $blog1->setUpdated($blog1->getCreated());
         $manager->persist($blog1);
 
-        $blog2 = new Blog();
+        /** $blog2 = new Blog();
         $blog2->setTitle('The pool on the roof must have a leak');
         $blog2->setBlog('Vestibulum vulputate mauris eget erat congue dapibus imperdiet justo scelerisque. Na. Cras elementum molestie vestibulum. Morbi id quam nisl. Praesent hendrerit, orci sed elementum lobortis.');
         $blog2->setImage('pool_leak.jpg');
@@ -65,15 +65,15 @@ class BlogFixtures extends AbstractFixture implements OrderedFixtureInterface
         $blog5->setTags('binary, one, zero, alive, dead, !trusting, movie, symblog');
         $blog5->setCreated(new \DateTime("2011-04-25 15:34:18"));
         $blog5->setUpdated($blog5->getCreated());
-        $manager->persist($blog5);
+        $manager->persist($blog5);**/
 
         $manager->flush();
         
         $this->addReference('blog-1', $blog1);
-        $this->addReference('blog-2', $blog2);
+        /**$this->addReference('blog-2', $blog2);
         $this->addReference('blog-3', $blog3);
         $this->addReference('blog-4', $blog4);
-        $this->addReference('blog-5', $blog5);
+        $this->addReference('blog-5', $blog5);**/
     }
     public function getOrder()
     {

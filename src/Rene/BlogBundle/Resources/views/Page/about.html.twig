@@ -2,21 +2,128 @@
 {# src/Blogger/BlogBundle/Resources/views/Page/about.html.twig #}
 {% extends 'ReneBlogBundle::base.html.twig' %}
 
-{% block title %}About{% endblock%}
+{% block title %}Herramientas{% endblock%}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/reneblog/css/style.css') }}" type="text/css" rel="stylesheet" />
+    <link href="{{ asset('bundles/reneblog/fonts/stylesheet.css') }}" type="text/css" rel="stylesheet" />
+    
+{% endblock %}
 
 {% block body %}
-    <header>
-        <h1>About symblog</h1>
-    </header>
-    <article>
-        <p>Donec imperdiet ante sed diam consequat et dictum erat faucibus. Aliquam sit
-        amet vehicula leo. Morbi urna dui, tempor ac posuere et, rutrum at dui.
-        Curabitur neque quam, ultricies ut imperdiet id, ornare varius arcu. Ut congue
-        urna sit amet tellus malesuada nec elementum risus molestie. Donec gravida
-        tellus sed tortor adipiscing fringilla. Donec nulla mauris, mollis egestas
-        condimentum laoreet, lacinia vel lorem. Morbi vitae justo sit amet felis
-        vehicula commodo a placerat lacus. Mauris at est elit, nec vehicula urna. Duis a
-        lacus nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-        posuere cubilia Curae.</p>
-    </article>
+    <div class="container">
+  
+  
+   	<!-- central image -->
+   	<div class="roundrr_center">
+   	</div>
+   
+   	<!-- Speech bubble for captions -->
+   	<div class="roundrr_speech">
+   	</div>
+ 
+  
+  	<!-- actual caption text -->
+  	<div id="roundrr_caption">
+   	</div>
+   
+  	<!-- the pick which is displayed over the current image -->
+  	<div id="roundrr_pick">
+   	</div>
+ 
+  
+  	<!-- the container of images -->
+		<div id='roundrr_container'>
+			<ul class='list'>
+		
+				<li class='item'>	
+				<div class='my_class'> 
+				<img alt="Symfony" src="http://symfony.com/images/common/logo/logo_symfony_header.png"></img> 
+				</div>	
+				</li>
+
+	    	    <li class='item'>	
+				<div class='my_class'>  
+				<img  alt="GitHub" src="https://a248.e.akamai.net/assets.github.com/images/modules/header/logov7@4x-hover.png?1360648843"></img>  </div>	</li>
+			
+
+           	<li class='item'>	
+				<div class='my_class'>  
+				<img alt="Eclipse" src="http://www.eclipse.org/eclipse.org-common/themes/Nova/images/eclipse.png"></img>
+				</div>	
+			</li>
+				
+			<li class='item'>	
+			<div class='my_class'>  
+			<img alt="Firebug" src="https://getfirebug.com/wiki/images/5/56/Flaming-firebug-logo-with-text.png"></img>
+			</div>	
+			</li>
+
+			<li class='item'>	
+			<div class='my_class'>  
+			<img alt="Ubuntu" src="http://www.ubuntu.com/static/u/img/logo.png"></img>  </div>	</li>
+			
+			
+			<li class='item'>	
+			<div  class='my_class'>  
+			<img alt="PHP"src="http://static.php.net/www.php.net/images/php.gif"></img>  
+			</div>	
+			</li>
+
+			
+			<li class='item'>	
+			<div class='my_class'>  
+			<img alt="MySql" src="http://www.mysql.com/common/logos/logo-mysql-110x57.png"></img>  </div>	
+			</li>
+
+			<li class='item'>	
+			<div class='my_class'>  
+			<img  alt="Doctrine" src="http://www.doctrine-project.org/_static/logo_dark_bg.png"></img>  </div>	</li>
+			
+			<li class='item'>	
+			<div class='my_class'>  
+			<img  alt="Jquery" src="http://static.jquery.com/org/images/project/jquery-project-sm.png"></img>  </div>	
+			</li>
+			
+			<li class='item'>	
+			<div class='my_class'>  
+			<img  alt="Css" src="https://twimg0-a.akamaihd.net/profile_images/88213795/w3c_bigger.png"></img>  </div>	</li>
+			
+			
+			<li class='item'>	
+			<div class='my_class'>  
+				<img  alt="FICH" src="http://fich.unl.edu.ar/css/images/logo-fich-unl.png"></img>  </div>	</li>
+			
+			<li class='item'>	
+				<div class='my_class'>  
+				<img  alt="NetBeans" src="http://netbeans.org/images_www/v7/design/logo_netbeans_red.png"></img>  </div>	</li>
+			
+			<li class='item'>	
+				<div class='my_class'>  
+				<img  alt="Gimp" src="http://www.gimp.org/images/frontsplash28.png"></img>  </div>	</li>
+			
+			<li class='item'>	
+				<div class='my_class'>  
+				<img  alt="GNU" src="http://planet.gnu.org/images/logo.png"></img>  </div>	
+			</li>
+			
+			<li class='item'>	
+				<div class='my_class'>  
+				<img alt="Linux" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Gnulinux.svg/170px-Gnulinux.svg.png"></img>  
+				</div>	
+			</li>
+			
+			<li class='item'>	
+				<div class='my_class'> 
+					<img  alt="Blog" src="{{ asset('img/logo.png') }}"></img>  
+				</div>	
+			</li>
+				
+				
+		</ul>
+	</div>
+
+ 
+  </div>
 {% endblock %}

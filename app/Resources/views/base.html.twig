@@ -8,11 +8,25 @@
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         {% block stylesheets %}
+        		<!-- Incluye los css -->
             <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
             <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
-	    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>	
+	   		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>	
+	   		
+	   	
+    	
             <link href="{{ asset('css/screen.css') }}" type="text/css" rel="stylesheet" />
         {% endblock %}
+        {% block javascripts %}
+        	<!--Include jQuery and jQuery roundrr dependancies-->
+	   		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	   		<script type='text/javascript' src="{{ asset('js/ui/jQuery.roundrr.js') }}"></script>
+	   		
+	   		<!-- Include Demo app code -->
+    		<script type='text/javascript' src="{{ asset('js/ui/app.js') }}"></script>
+        
+        {% endblock %}
+        
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
@@ -25,7 +39,7 @@
                             <ul class="navigation">
 								<li><span href="#">Rene Recalde<span> </li>	
                                 <li><a href="{{ path('ReneBlogBundle_homepage') }}">Home</a></li>
-                                <li><a href="{{ path('ReneBlogBundle_about') }}">Tec</a></li>
+                                <li><a href="{{ path('ReneBlogBundle_about') }}">Herramientas</a></li>
                                 <li><a href="{{ path('ReneBlogBundle_contact') }}">Contacto</a></li>
                             </ul>
                         </nav>
@@ -62,11 +76,14 @@
             <div id="footer">
                 {% block footer %}
                 	Blog personal Rene Recalde. 
+                	<p>
                 	Basado en symblog - created by <a href="https://github.com/dsyph3r">dsyph3r</a>
+                	</p>
+                	Sitio desarrollado con software libre <a href="http://es.wikipedia.org/wiki/GNU/Linux">GNU/Linux</a>.
                 {% endblock %}
             </div>
         </section>
 
-        {% block javascripts %}{% endblock %}
+        
     </body>
 </html>

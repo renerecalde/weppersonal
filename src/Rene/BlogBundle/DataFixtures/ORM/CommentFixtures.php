@@ -18,7 +18,7 @@ class CommentFixtures extends AbstractFixture implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
-        $comment = new Comment();
+        /**$comment = new Comment();
         $comment->setUser('symfony');
         $comment->setComment('To make a long story short. You can\'t go wrong by choosing Symfony! And no one has ever been fired for using Symfony.');
         $comment->setBlog($manager->merge($this->getReference('blog-1')));
@@ -121,7 +121,7 @@ class CommentFixtures extends AbstractFixture implements OrderedFixtureInterface
         $comment->setUser('Gary');
         $comment->setComment('Bill Who?');
         $comment->setBlog($manager->merge($this->getReference('blog-5')));
-        $manager->persist($comment);
+        $manager->persist($comment);**/
 
         $manager->flush();
     }
